@@ -12,9 +12,7 @@ int main()
     int sum = 0;
 
     for (int i = 1; i < 1000; i++) {
-        for (int j = 1; j < 1000; j++) {
-        if (j / 3 == i || j / 5 == i) {sum += j; i++;}
-        }
+        if (i % 3 == 0 || i % 5 == 0) {sum += i;}
     }
 
     printf("The sum is: ");
