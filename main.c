@@ -11,22 +11,13 @@ int main()
 
     int sum = 0;
 
-    int multiplesThree = 0;
-
     for (int i = 1; i < 1000; i++) {
         for (int j = 1; j < 1000; j++) {
-        if (j / 3 == i) {multiplesThree = j; sum += multiplesThree; i++;}
+        if (j / 3 == i || j / 5 == i) {sum += j; i++;}
         }
     }
 
-    int multiplesFive = 0;
-
-    for (int i = 1; i < 1000; i++) {
-        for (int j = 1; j < 1000; j++) {
-        if (j / 5 == i) {multiplesFive = j; sum += multiplesFive; i++;}
-        }
-    }
-
+    printf("The sum is: ");
     printf("%d", sum);
 
 
